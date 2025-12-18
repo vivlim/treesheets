@@ -276,6 +276,9 @@ elseif(WIN32)
         "russian"
     )
     set(CPACK_INNOSETUP_SETUP_PrivilegesRequired "lowest")
+    # https://stackoverflow.com/a/78644911
+    set(CPACK_INNOSETUP_SETUP_ArchitecturesAllowed "x64compatible")
+    set(CPACK_INNOSETUP_SETUP_ArchitecturesInstallIn64BitMode "x64compatible")
     set(CPACK_INNOSETUP_IGNORE_README_PAGE ON)
     set(CPACK_INNOSETUP_IGNORE_LICENSE_PAGE ON)
     set(CPACK_INNOSETUP_USE_MODERN_WIZARD ON)
